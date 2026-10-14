@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NGMVP — The Next Generation Movement Vote Protection. A civic platform for documenting election incidents and supporting transparent elections in Nigeria.">
+<title>NGMVP | Every Vote Matters</title>
+<style>
+:root{--navy:#071a2b;--navy2:#0c263a;--green:#15945a;--green2:#0d7545;--gold:#d6b66b;--ink:#142536;--muted:#647587;--paper:#f5f8f7;--white:#fff;--line:#e2e9e7;--red:#b74343}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}button,input,select,textarea{font:inherit}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,92%);margin:auto}.topline{background:#04111e;color:#cbd8e0;font-size:.8rem;padding:8px 0}.topline .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#5bd39a;margin-right:7px}.header{position:sticky;top:0;z-index:20;background:rgba(7,26,43,.97);backdrop-filter:blur(12px);color:white;border-bottom:1px solid #20384a}.nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:22px}.brand{display:flex;align-items:center;gap:12px;min-width:210px}.logo{height:46px;width:46px;display:grid;place-items:center;border:1px solid rgba(214,182,107,.7);border-radius:13px;color:var(--gold);font-weight:900;letter-spacing:-1px;font-size:1.05rem;background:linear-gradient(145deg,#123a32,#071a2b)}.brand strong{display:block;font-size:.96rem;letter-spacing:.04em}.brand small{display:block;color:#a9bdc9;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase}.links{display:flex;align-items:center;gap:23px;font-size:.9rem;color:#d7e1e7}.links a:hover{color:#8ee0b4}.btn{border:0;border-radius:10px;padding:12px 17px;display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:750;cursor:pointer;transition:.2s}.btn:hover{transform:translateY(-1px)}.btn-green{background:var(--green);color:white;box-shadow:0 8px 22px #15945a2b}.btn-green:hover{background:var(--green2)}.btn-outline{border:1px solid #718898;color:white;background:transparent}.btn-light{background:white;color:var(--navy);border:1px solid var(--line)}.menu-btn{display:none;background:transparent;color:white;border:1px solid #496173;border-radius:9px;padding:8px 11px}.hero{background:radial-gradient(ellipse at 80% 20%,#165541 0,transparent 35%),linear-gradient(120deg,#071a2b,#0a2638 65%,#0b352b);color:white;position:relative;overflow:hidden}.hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff08 1px,transparent 1px),linear-gradient(90deg,#ffffff08 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to right,transparent,#000)}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.12fr .88fr;gap:54px;align-items:center;padding:88px 0 92px}.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#9be0b8;font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase}.eyebrow:before{content:"";width:26px;height:2px;background:var(--gold)}h1{font-size:clamp(2.8rem,5vw,4.7rem);line-height:1.02;letter-spacing:-.055em;margin:20px 0}.hero h1 span{color:#8cddb0}.hero p{font-size:1.08rem;max-width:600px;color:#c2d2dc}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 20px}.hero-note{font-size:.8rem!important;color:#9fb3c0!important}.hero-card{border:1px solid #ffffff25;background:linear-gradient(150deg,#ffffff12,#ffffff06);border-radius:22px;padding:25px;box-shadow:0 24px 70px #0003}.card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-bottom:17px;border-bottom:1px solid #ffffff20}.card-head strong{font-size:1.02rem}.pill{border:1px solid #6cc69a6b;color:#9be0b8;background:#15945a20;border-radius:99px;padding:5px 9px;font-size:.7rem;font-weight:800}.metric-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:17px 0}.metric{padding:16px;border:1px solid #ffffff18;background:#06172265;border-radius:13px}.metric b{display:block;font-size:1.8rem;line-height:1.25}.metric span{font-size:.77rem;color:#b5c7d1}.activity{display:flex;gap:11px;align-items:flex-start;padding:12px 0;border-top:1px solid #ffffff17;font-size:.82rem;color:#d1dde3}.activity i{width:9px;height:9px;border-radius:50%;background:var(--gold);margin-top:7px;flex-shrink:0}.activity small{display:block;color:#9eb2bd}.section{padding:78px 0}.section-head{max-width:680px;margin-bottom:32px}.kicker{color:var(--green2);font-size:.76rem;letter-spacing:.14em;font-weight:850;text-transform:uppercase}.section h2{font-size:clamp(2rem,3.3vw,3rem);letter-spacing:-.04em;line-height:1.1;margin:12px 0}.section-head p{color:var(--muted);margin:12px 0 0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.feature{background:white;border:1px solid var(--line);border-radius:17px;padding:25px;box-shadow:0 6px 22px #0c263a08}.feature-icon{height:46px;width:46px;display:grid;place-items:center;background:#e7f6ee;border-radius:13px;color:var(--green2);font-size:1.35rem;margin-bottom:18px}.feature h3{margin:0 0 8px;font-size:1.1rem}.feature p{color:var(--muted);font-size:.92rem;margin:0}.elections{background:#eaf1ee}.election-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.election{background:white;border:1px solid #dce7e1;border-radius:15px;padding:21px}.election .num{font-size:.73rem;color:var(--green2);font-weight:850;letter-spacing:.1em}.election h3{font-size:1.03rem;margin:10px 0 5px}.election p{font-size:.85rem;color:var(--muted);margin:0}.report-section{background:white}.report-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}.report-aside{background:var(--navy);color:white;border-radius:20px;padding:28px;position:sticky;top:105px}.report-aside h3{font-size:1.45rem;line-height:1.2;margin:14px 0}.report-aside p,.report-aside li{color:#bfd0d9;font-size:.9rem}.report-aside ul{padding-left:18px}.notice{border-left:3px solid var(--gold);padding:12px 14px;background:#ffffff0d;font-size:.82rem;color:#d6e1e6;margin-top:22px}.form-card{border:1px solid var(--line);border-radius:20px;padding:28px;background:#fff}.form-card h3{margin:0 0 4px;font-size:1.4rem}.form-card>p{margin:0 0 23px;color:var(--muted);font-size:.9rem}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.83rem;font-weight:750}.field input,.field select,.field textarea{width:100%;padding:12px 13px;border:1px solid #d7e1de;border-radius:9px;background:#fbfdfc;color:var(--ink);outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--green);box-shadow:0 0 0 3px #15945a18}.field textarea{min-height:115px;resize:vertical}.consent{display:flex;gap:10px;align-items:flex-start;font-size:.8rem;color:var(--muted);margin:17px 0}.consent input{margin-top:5px}.form-foot{display:flex;align-items:center;gap:14px;flex-wrap:wrap}.form-foot small{color:var(--muted);font-size:.76rem}.success{display:none;padding:15px;border-radius:10px;background:#e7f6ee;color:#0b6b3e;margin-top:16px;font-size:.9rem}.success.show{display:block}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:steps}.step{padding:24px 0;border-top:2px solid var(--green);counter-increment:steps}.step:before{content:"0" counter(steps);color:var(--green2);font-size:.78rem;font-weight:900;letter-spacing:.1em}.step h3{margin:10px 0 7px}.step p{color:var(--muted);font-size:.9rem;margin:0}.cta{background:linear-gradient(115deg,#0b2b3c,#0a573b);color:white;padding:48px;border-radius:22px;display:flex;align-items:center;justify-content:space-between;gap:25px}.cta h2{margin:0 0 9px;font-size:clamp(1.7rem,3vw,2.5rem)}.cta p{margin:0;color:#c5ddd3;max-width:620px}.footer{background:#04111e;color:#bdcbd3;padding:46px 0 22px}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px;padding-bottom:30px}.footer p,.footer a{font-size:.85rem;color:#a8bac4}.footer h4{color:white;margin:0 0 12px}.footer a{display:block;margin:7px 0}.footer-bottom{border-top:1px solid #ffffff1a;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.75rem;color:#8297a4}.demo-tag{display:inline-block;border:1px solid #f0d59b;color:#77581a;background:#fff8e8;border-radius:6px;padding:3px 7px;font-size:.7rem;font-weight:800}.mobile-only{display:none}
+@media(max-width:900px){.links{gap:13px}.links a:not(.btn){display:none}.hero-grid{gap:28px;padding:65px 0}.features{grid-template-columns:repeat(2,1fr)}.election-grid{grid-template-columns:repeat(2,1fr)}.report-grid{grid-template-columns:1fr}.report-aside{position:static}.footer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.topline .wrap{font-size:.72rem}.nav{min-height:72px}.brand{min-width:0}.brand strong{font-size:.8rem}.brand small{font-size:.58rem}.logo{width:40px;height:40px}.menu-btn{display:block}.links{display:none;position:absolute;top:72px;left:0;right:0;background:var(--navy);padding:18px 5%;border-top:1px solid #294154;flex-direction:column;align-items:stretch}.links.open{display:flex}.links a:not(.btn){display:block;padding:7px 0}.hero-grid{grid-template-columns:1fr;padding:52px 0}.hero-card{padding:19px}.metric b{font-size:1.5rem}.section{padding:56px 0}.features,.election-grid,.steps,.footer-grid{grid-template-columns:1fr}.form-card{padding:20px}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.cta{padding:29px;align-items:flex-start;flex-direction:column}.footer-grid{gap:20px}}
+</style>
+</head>
+<body>
+<div class="topline"><div class="wrap"><span><span class="status-dot"></span>Civic participation • Election integrity • Nigeria</span><span>Independent reporting. Responsible action.</span></div></div>
+<header class="header">
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="NGMVP home"><span class="logo">NGM<span style="color:#fff">VP</span></span><span><strong>NGM VOTE PROTECTION</strong><small>The Next Generation Movement</small></span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="links" id="navLinks" aria-label="Main navigation">
+      <a href="#mission">Our mission</a><a href="#elections">Elections</a><a href="#how">How it works</a><a href="#report">Report an incident</a>
+      <a class="btn btn-green" href="#report">Submit a report ↗</a>
+    </nav>
+  </div>
+</header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div>
+    <span class="eyebrow">Your voice. Your vote. Your future.</span>
+    <h1>Every vote<br>deserves to be <span>counted.</span></h1>
+    <p>NGMVP helps citizens and trained observers document election-day incidents, organize credible information, and support transparent, peaceful elections across Nigeria.</p>
+    <div class="hero-actions"><a class="btn btn-green" href="#report">Report an incident <span>↗</span></a><a class="btn btn-outline" href="#mission">Explore our mission ↓</a></div>
+    <p class="hero-note">A civic reporting initiative. Reports require verification and do not independently establish that an offence occurred.</p>
+  </div>
+  <aside class="hero-card" aria-label="Illustrative monitoring overview">
+    <div class="card-head"><strong>Election Integrity Overview</strong><span class="pill">PLATFORM PREVIEW</span></div>
+    <div class="metric-grid">
+      <div class="metric"><b>36 + FCT</b><span>States and Federal Capital Territory</span></div>
+      <div class="metric"><b>4 levels</b><span>Presidential to House elections</span></div>
+      <div class="metric"><b>Evidence</b><span>Structured incident documentation</span></div>
+      <div class="metric"><b>Follow-up</b><span>Review and escalation workflow</span></div>
+    </div>
+    <div class="activity"><i></i><div><strong>Document carefully</strong><small>Record time, location, details and safe supporting evidence.</small></div></div>
+    <div class="activity"><i></i><div><strong>Verify before sharing</strong><small>Separate firsthand observations from unconfirmed claims.</small></div></div>
+    <div class="activity"><i></i><div><strong>Escalate responsibly</strong><small>Refer urgent threats to appropriate authorities.</small></div></div>
+  </aside>
+</div></section>
+<section class="section" id="mission"><div class="wrap">
+  <div class="section-head"><span class="kicker">Our mission</span><h2>Protect the process.<br>Respect every citizen.</h2><p>NGMVP is designed to support peaceful civic participation and accountable election monitoring. Our approach is non-violent, evidence-led, and focused on the integrity of the electoral process—not on promoting or suppressing any candidate or party.</p></div>
+  <div class="features">
+    <article class="feature"><div class="feature-icon">♧</div><h3>Citizen incident reporting</h3><p>Provide a structured way to record suspected intimidation, vote buying, violence, obstruction, or other election-related irregularities.</p></article>
+    <article class="feature"><div class="feature-icon">⌖</div><h3>Location-based organization</h3><p>Sort reports by state, local government area, and polling-unit details so authorized reviewers can prioritize follow-up.</p></article>
+    <article class="feature"><div class="feature-icon">▣</div><h3>Evidence and review</h3><p>Support responsible evidence handling, reviewer notes, report status tracking, and a clear record of follow-up actions.</p></article>
+    <article class="feature"><div class="feature-icon">♙</div><h3>Observer coordination</h3><p>Provide a future workflow for registering, verifying, training, and assigning observers who have the required authorization.</p></article>
+    <article class="feature"><div class="feature-icon">◷</div><h3>Timely escalation</h3><p>Help direct credible reports to appropriate election officials, accredited observer organizations, or emergency services where necessary.</p></article>
+    <article class="feature"><div class="feature-icon">◎</div><h3>Privacy by design</h3><p>Limit unnecessary personal information, protect sensitive reports, and avoid publicly exposing voters, witnesses, or alleged victims.</p></article>
+  </div>
+</div></section>
+<section class="section elections" id="elections"><div class="wrap">
+  <div class="section-head"><span class="kicker">Election coverage</span><h2>One platform. Every level of election.</h2><p>The platform can be configured to support monitoring workflows for Nigeria's major elective offices. Election dates and official results should always be confirmed through INEC.</p></div>
+  <div class="election-grid">
+    <article class="election"><span class="num">01 / NATIONAL</span><h3>Presidential election</h3><p>Record and review reports from presidential election polling locations across the federation.</p></article>
+    <article class="election"><span class="num">02 / STATE</span><h3>Governorship election</h3><p>Organize state-level reporting and track issues that require local follow-up.</p></article>
+    <article class="election"><span class="num">03 / NATIONAL</span><h3>Senatorial election</h3><p>Group incident reports by senatorial district, LGA, and polling-unit details.</p></article>
+    <article class="election"><span class="num">04 / NATIONAL</span><h3>House of Representatives</h3><p>Support constituency-level reporting and careful documentation of election-day events.</p></article>
+  </div>
+</div></section>
+<section class="section" id="how"><div class="wrap">
+  <div class="section-head"><span class="kicker">How it works</span><h2>From observation to responsible action.</h2><p>Good reporting is specific, safe, and verifiable. A submitted report is a lead for review—not a verdict.</p></div>
+  <div class="steps">
+    <article class="step"><h3>Observe safely</h3><p>Do not confront anyone, interfere with voting, trespass, or put yourself or others at risk to collect evidence.</p></article>
+    <article class="step"><h3>Record the facts</h3><p>Note what you personally observed, when and where it happened, and whether any supporting material exists.</p></article>
+    <article class="step"><h3>Review and refer</h3><p>Authorized reviewers assess reports, protect sensitive details, and refer credible concerns through appropriate channels.</p></article>
+  </div>
+</div></section>
+<section class="section report-section" id="report"><div class="wrap report-grid">
+  <aside class="report-aside"><span class="eyebrow">Incident desk</span><h3>See something concerning? Document it responsibly.</h3><p>Use this form to prepare a report for review. Do not submit passwords, voter-card numbers, bank details, or unnecessary private information.</p>
+    <ul><li>Be factual and specific.</li><li>Distinguish what you witnessed from what someone told you.</li><li>Do not upload or publish another person's sensitive data without a lawful basis.</li><li>For immediate danger, contact local emergency services or the appropriate authorities.</li></ul>
+    <div class="notice">This demonstration does not transmit reports to an organization or emergency service. Do not enter real or sensitive incident details until a secure backend is connected.</div>
+  </aside>
+  <div class="form-card"><span class="demo-tag">DEMO FORM — NOT A LIVE REPORTING CHANNEL</span><h3 style="margin-top:13px">Prepare an incident report</h3><p>Fields marked * are required. Use sample information while testing this prototype.</p>
+    <form id="incidentForm">
+      <div class="form-grid">
+        <div class="field"><label for="election">Election type *</label><select id="election" required><option value="">Choose election</option><option>Presidential</option><option>Governorship</option><option>Senatorial</option><option>House of Representatives</option><option>Other / not sure</option></select></div>
+        <div class="field"><label for="incidentType">Incident category *</label><select id="incidentType" required><option value="">Choose category</option><option>Suspected voter intimidation</option><option>Suspected vote buying</option><option>Violence or threat</option><option>Polling access obstruction</option><option>Ballot or counting concern</option><option>Campaign material / campaign-rule concern</option><option>Other / requires review</option></select></div>
+        <div class="field"><label for="state">State / FCT *</label><select id="state" required><option value="">Choose state</option><option>Abia</option><option>Adamawa</option><option>Akwa Ibom</option><option>Anambra</option><option>Bauchi</option><option>Bayelsa</option><option>Benue</option><option>Borno</option><option>Cross River</option><option>Delta</option><option>Ebonyi</option><option>Edo</option><option>Ekiti</option><option>Enugu</option><option>FCT - Abuja</option><option>Gombe</option><option>Imo</option><option>Jigawa</option><option>Kaduna</option><option>Kano</option><option>Katsina</option><option>Kebbi</option><option>Kogi</option><option>Kwara</option><option>Lagos</option><option>Nasarawa</option><option>Niger</option><option>Ogun</option><option>Ondo</option><option>Osun</option><option>Oyo</option><option>Plateau</option><option>Rivers</option><option>Sokoto</option><option>Taraba</option><option>Yobe</option><option>Zamfara</option></select></div>
+        <div class="field"><label for="lga">Local government area *</label><input id="lga" required placeholder="Enter LGA"></div>
+        <div class="field"><label for="unit">Polling unit / location</label><input id="unit" placeholder="Use public location details only"></div>
+        <div class="field"><label for="when">Date and approximate time *</label><input id="when" required type="datetime-local"></div>
+        <div class="field full"><label for="details">What did you observe? *</label><textarea id="details" required minlength="20" placeholder="Describe the event factually. Include what you personally observed and avoid naming private individuals unnecessarily."></textarea></div>
+        <div class="field"><label for="witness">How do you know about it? *</label><select id="witness" required><option value="">Choose one</option><option>I witnessed it directly</option><option>I received information from another person</option><option>I saw it in a photo or video</option><option>Other / not sure</option></select></div>
+        <div class="field"><label for="evidence">Supporting evidence available?</label><select id="evidence"><option>No</option><option>Photo</option><option>Video</option><option>Document</option><option>Witness willing to be contacted</option><option>Other</option></select></div>
+        <div class="field full"><label for="contact">Optional contact email or phone</label><input id="contact" placeholder="Leave blank if you prefer not to provide contact details"></div>
+      </div>
+      <label class="consent"><input type="checkbox" id="confirm" required><span>I confirm this report is submitted in good faith, that I have not knowingly included false information, and that I understand this demo does not send or securely store my report. *</span></label>
+      <div class="form-foot"><button class="btn btn-green" type="submit">Validate demo report ↗</button><small>Your report stays in this browser demonstration.</small></div>
+      <div class="success" id="successMsg" role="status" aria-live="polite"></div>
+    </form>
+  </div>
+</div></section>
+<section class="section"><div class="wrap"><div class="cta"><div><h2>Build trust through evidence.</h2><p>Help create a peaceful, transparent election culture where concerns are documented responsibly and every citizen's rights are respected.</p></div><a class="btn btn-green" href="#report">Prepare a report ↗</a></div></div></section>
+</main>
+<footer class="footer"><div class="wrap">
+  <div class="footer-grid"><div><a class="brand" href="#home"><span class="logo">NGM<span style="color:#fff">VP</span></span><span><strong>NGM VOTE PROTECTION</strong><small>The Next Generation Movement</small></span></a><p>Supporting civic participation and responsible election incident documentation across Nigeria.</p></div>
+    <div><h4>Explore</h4><a href="#mission">Our mission</a><a href="#elections">Election coverage</a><a href="#how">How it works</a><a href="#report">Incident report demo</a></div>
+    <div><h4>Responsible reporting</h4><p>Do not spread unverified allegations. Protect the privacy and safety of voters, witnesses, and affected people. Confirm official election information through INEC.</p></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> The Next Generation Movement Vote Protection (NGMVP)</span><span>Prototype only • Secure backend and operational review required</span></div>
+</div></footer>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('incidentForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const msg=document.getElementById('successMsg');
+  if(!this.reportValidity()) return;
+  const ref='NGMVP-DEMO-'+new Date().toISOString().slice(0,10).replaceAll('-','')+'-'+Math.random().toString(36).slice(2,7).toUpperCase();
+  msg.textContent='Demo validation successful. Reference: '+ref+'. Nothing has been sent, saved to a server, or reported to any authority. Connect a secure backend before using this for real incidents.';
+  msg.classList.add('show');
+  msg.scrollIntoView({behavior:'smooth',block:'nearest'});
+});
+</script>
+</body>
+</html>
